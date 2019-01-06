@@ -1,8 +1,12 @@
-var app = new Vue({
+let app = new Vue({
   el: '#app',
   data: {
     firstName: '',
-    lastName: '',
-    fullName: ''
+    lastName: ''
+  },
+  computed: {
+    fullName: function() {
+      return this.firstName + ' ' + this.lastName
+    }
   }
 })
